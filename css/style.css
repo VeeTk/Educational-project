@@ -1,0 +1,797 @@
+/* reset css*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    background:  #212121;
+color: #f2f2f2;
+}
+
+img {
+ 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+ul{
+    padding-left: 0;
+}
+
+ul>li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+    cursor:pointer;
+}
+
+
+.header {
+    grid-area: my-header;
+}
+
+.main {
+    grid-area: my-main;
+    margin-left: 3.6rem;
+}
+
+.aside {
+    grid-area: my-aside;
+}
+
+.grid {
+    display:grid;
+    grid-template-areas: 
+    "my-header my-header my-header"
+    "my-aside  my-main my-main"
+    "my-aside  my-main my-main";
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 8rem 0;
+}
+
+.grid-init {
+    max-width: 144rem;
+    margin: auto;
+    padding: 3rem 2.4rem 4rem 0rem;
+}
+
+.header_wrap {
+    display: flex;
+    align-items: center;
+    margin-left: 2.4rem;
+}
+
+.header_logo{
+    font-size: 6.4rem;
+    margin-right: 7rem;
+    font-weight: 700;
+    line-height: 117%;
+}
+
+.header_nav a{
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 117%;
+}
+.header_nav a:not(:last-child) {
+    margin-right: 2.5rem;
+}
+.header_nav{
+    margin-right: 9.2rem;
+}
+
+.header_hour {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 115%;
+}
+
+.header_days {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 117%;
+}
+
+.header_find{
+    width: 33rem;
+    height: 4.1rem;
+    border-radius: 0.8rem;
+    margin-right: 3.9rem;
+}
+.header_find input {
+    width: 100%;
+    height: 100%;
+    line-height: 115%;
+    background : rgba(255, 255, 255, 0.08) url('../img/Combined-Shape.svg');
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    background-position: top 50% right 1.5rem;
+    border-radius: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 5rem;
+    font-size: 2rem;
+    color : #FFFFFF;
+}
+
+.header_find input::placeholder {
+    font-size: 2rem;
+    color : #FFFFFF;
+}
+
+.header_date {
+    text-align: center;
+    margin-right: 8.6rem;
+}
+
+.header_hour {
+    font-size: 2rem;
+    line-height: 115%;
+}
+.header_days {
+    font-size: 1.2rem;
+    line-height: 117%;
+}
+
+.header_personal {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    cursor:pointer
+}
+
+.main-display__trailer {
+    position: relative;  
+    height: 20.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background : url('../img/main-trailer.jpg');
+    background-repeat: no-repeat;
+    background-size : cover;
+    background-position: center;
+    border-radius: 1.6rem;
+    padding: 1.9rem 0 1.9rem 1.9rem;
+}
+
+.main-display__views {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 119%;
+}
+
+.main-display__header {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 117%;
+}
+
+.main-display__date {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 114%;
+}
+
+.button-play__wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.07);
+    width: 8.1rem;
+    height: 8.1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-play {
+    width: 0;
+    height: 0;
+    border-top: 1.5rem solid rgba(255, 255, 255, 0.00);
+    border-left: 2.5rem solid #FFFFFF;
+    border-bottom: 1.5rem solid rgba(255, 255, 255, 0.00);
+    border-radius : 0.2rem;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.title-left {
+    display: flex;
+    align-items: center;
+}
+
+.title-right {
+    display: flex;
+    align-items: center;
+}
+.title-right img {
+    align-items :center;
+    width: 0.7rem;
+    height: 1.2rem;
+}
+
+.continue-watching {
+    font-size: 2rem;
+    line-height: 115%;
+}
+
+.formovies {
+    font-size: 2rem;
+    line-height: 115%;
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.all-movies {
+    font-size: 1.4rem;
+    line-height: 114%;
+    padding-top: 0.5rem;
+    padding-right: 0.8rem;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.main-videos {
+    display: flex;
+    border-radius: 1.6rem;
+    justify-content: space-between;
+}
+
+.video1 {
+    position: relative; 
+    display: flex;
+    width: 100%;
+    height: 25.2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url('../img/unsplash_phIFdC6lA4E.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 3rem 0 0;
+    border-radius: 1.6rem;
+}
+
+.trending-blur {
+    width: 12rem;
+    height: 2.5rem;
+    margin: 1.9rem 0 0 1.9rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(1.6rem);
+    border-radius: 1.6rem;
+}
+
+.trending-blur img {
+    margin: 0.4rem 0 0 1.3rem;
+    width: 9.2rem;
+    height: 1.6rem;
+}
+
+.video2 {
+    position: relative; 
+    width: 100%;
+    height: 25.2rem;
+    display: flex;
+    flex-direction: column;
+    background: url('../img/unsplash_phIFdC6lA4E.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-end;
+    margin: 0 0 0 3rem;
+    border-radius: 1.6rem;
+}
+
+.button-play__wrap2 {
+    min-width: 3rem;
+    height: 3rem;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-play2 {
+    width: 1.1rem;
+    height: 1.1rem;
+    padding-left: 0.25rem;
+}
+
+.name-blur {
+    display: flex;
+    width: 100%;
+    height: 6.8rem;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(1.6rem);
+    border-radius: 1.5rem;
+    padding: 1.9rem 1.9rem 1.9rem 1.9rem;
+    align-items: center;
+}
+
+.name {
+    padding-left: 1.5rem;
+}
+
+.name-film {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 120%; 
+}
+
+.date {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.timing {
+    width: 8rem;
+    height: 2.5rem;
+    background: #FFFFFF;
+    border-radius: 1.6rem;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0.5rem 1.2rem;
+}
+
+.time {
+    color: #000000;
+    font-size: 1.4rem;
+    line-height: 114%;
+}
+
+.main-low {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-low-movie {
+    display: flex;
+    width: 28.6rem;
+    height: 19.2rem;
+    background: url('../img/netflix.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.6rem;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.low-blur {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3.8rem;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(1.6rem);
+    border-radius: 1.5rem;   
+}
+
+.low-button-play__wrap {
+    width: 1.8rem;
+    height: 1.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 1rem 0 1rem 1.9rem;
+}
+
+.low-button-play {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-left: 0.2rem;
+}
+
+.low-name{
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+}
+
+.low-name-film {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.low-date {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.low-star {
+    display: flex;
+    margin-left: auto;
+    margin-right: 1.9rem;
+    align-items:center;
+}
+
+.number {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+
+/*aside*/
+
+
+.aside_new-trailers {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2.3rem 4rem 2.4rem;
+}
+
+.new-trailers {
+    max-width: 37.1rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2.6rem;
+}
+
+.aside-left-side {
+    font-size: 2rem;
+    line-height: 115%;
+}
+
+.aside-right-side {
+    display: flex;
+    align-items: center;
+
+}
+
+.sortby {
+    font-size: 1.4rem;
+    line-height: 114%;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.today {
+    font-size: 1.4rem;
+    line-height: 114%;
+}
+
+.right-today {
+    display: flex;
+    margin-left: 1.5rem;
+}
+
+.arrows {
+    margin-left: 0.4rem;
+}
+
+.arrow1 {
+    cursor:pointer;
+}
+
+.arrow2 {
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    cursor:pointer;
+}
+
+.trailer1 {
+    position: relative;
+    max-width: 37.1rem;
+    height: 22.6rem;
+    display: flex;
+    flex-direction: column;
+    background: url('../img/aside\ trailer.png');
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    padding: 1.9rem 1.9rem 1.9rem 1.9rem;
+    border-radius: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.aside-trailer1-views {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 119%;
+}
+
+.aside-trailer1-name {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 117%;
+}
+
+.aside-trailer1-date {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 114%;
+    margin-top: 0.5rem;
+}
+
+.aside-trailer1-bottom-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.07);
+    width: 8.1rem;
+    height: 8.1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.aside-trailer1-play {
+    width: 0;
+    height: 0;
+    border-top: 1.5rem solid rgba(255, 255, 255, 0.00);
+    border-left: 2.5rem solid #FFFFFF;
+    border-bottom: 1.5rem solid rgba(255, 255, 255, 0.00);
+    border-radius : 0.2rem;
+}
+
+
+
+
+.trailer2 {
+    position: relative;
+    max-width: 37.1rem;
+    height: 22.6rem;
+    display: flex;
+    flex-direction: column;
+    background: url('../img/aside\ trailer.png');
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    padding: 1.9rem 1.9rem 1.9rem 1.9rem;
+    border-radius: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.aside-trailer2-views {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 119%;
+}
+
+.aside-trailer2-name {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 117%;
+}
+
+.aside-trailer2-date {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 114%;
+    margin-top: 0.5rem;
+}
+
+.aside-trailer2-bottom-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.07);
+    width: 8.1rem;
+    height: 8.1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.aside-trailer2-play {
+    width: 0;
+    height: 0;
+    border-top: 1.5rem solid rgba(255, 255, 255, 0.00);
+    border-left: 2.5rem solid #FFFFFF;
+    border-bottom: 1.5rem solid rgba(255, 255, 255, 0.00);
+    border-radius : 0.2rem;
+}
+
+
+
+.aside_favourite-genres {
+    height: 28.1rem;
+    padding: 2.5rem 0 4rem 2.4rem;
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.favourite-genres {
+    font-size: 2rem;
+    line-height: 115%;
+}
+
+.genres {
+    margin: 2rem 0 3rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1.2rem;
+    line-height: 117%;
+}
+
+.action-icon {
+    display: flex;
+    justify-content: center;
+    height: 2.5rem;
+    background: #8066F6;
+    border-radius: 3rem;
+    padding: 0.5rem 1rem 0.6rem 1rem;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+    cursor:pointer;
+}
+
+.western-icon {
+    display: flex;
+    justify-content: center;
+    width: 7rem;
+    height: 2.5rem;
+    background: #E1784F;
+    border-radius: 3rem;
+    padding: 0.5rem 1rem 0.6rem 1rem;
+    margin-right: 3rem;
+    cursor:pointer;
+}
+
+
+.adventures-icon {
+    display: flex;
+    justify-content: center;
+    height: 2.5rem;
+    background: #8066F6;
+    border-radius: 3rem;
+    padding: 0.5rem 1rem 0.6rem 1rem;
+    margin-right: 3rem;
+    cursor:pointer;
+}
+
+.drama-icon {
+    display: flex;
+    justify-content: center;
+    height: 2.5rem;
+    background: #E1784F;
+    border-radius: 3rem;
+    padding: 0.5rem 1rem 0.6rem 1rem;
+    margin-right: 3rem;
+    cursor:pointer;
+}
+
+.comedy-icon {
+    display: flex;
+    justify-content: center;
+    height: 2.5rem;
+    background: #63CFE1;
+    border-radius: 3rem;
+    padding: 0.5rem 1rem 0.6rem 1rem;
+    margin-right: 3rem;
+    cursor:pointer;
+}
+
+.vector {
+    width: 6.5rem;
+    height: 0.2rem;
+    background:rgba(255, 255, 255, 0.1);
+    margin-bottom: 3rem;
+}
+
+.add-genres {
+    display: flex;
+    align-items: center;
+}
+
+.genres-text {
+    font-size: 1.4rem;
+    line-height: 114%;
+    margin-left: 0.5rem;
+    margin-bottom: 2rem;
+    cursor:pointer;
+}
+
+.bottom-plus {
+    display: flex;
+    justify-content: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: #2B2A2F;
+    border-radius: 50%;
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+    margin-bottom: 2rem;
+    cursor:pointer;
+}
+
+.plus {
+    font-size: 1.4rem;
+    line-height: 114%;
+}
+
+.genres2 {
+    display: flex;
+    font-size: 1.2rem;
+    line-height: 117%;
+}
+
+.low-bottom1 {
+    display: flex;
+    justify-content: center;
+    height: 2.5rem;
+    background: #2B2A2F;
+    border-radius: 3rem;
+    margin-right: 3rem;
+    padding: 0.5rem 1rem 0.6rem 1rem;
+    cursor:pointer;
+}
+
+.low-bottom2 {
+    display: flex;
+    justify-content: center;
+    height: 2.5rem;
+    background: #2B2A2F;
+    border-radius: 3rem;
+    margin-right: 3rem;
+    padding: 0.5rem 1rem 0.6rem 1rem;
+    cursor:pointer;
+}
+
+.low-bottom3 {
+    display: flex;
+    justify-content: center;
+    height: 2.5rem;
+    background: #2B2A2F;
+    border-radius: 3rem;
+    margin-right: 3rem;
+    padding: 0.5rem 1rem 0.6rem 1rem;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+/*сетка*/
